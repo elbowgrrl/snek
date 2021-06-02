@@ -7,9 +7,19 @@ const connect = function () {
   })
 
    conn.setEncoding("utf-8");
+
+   conn.on('connect', () => {
+     console.log("Connected to SSssssserver")
+   });
+
+   conn.on('connect', () => {
+    conn.write('Name: MEV')
+  });
    
    return conn;
 
 };
+
+
 
 module.exports = connect;
